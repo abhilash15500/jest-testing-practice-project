@@ -9,6 +9,11 @@ function isNotLetter(char) {
 // caesar cipher func
 
 function caesarCipher(string, shiftFactor) {
+
+if(shiftFactor < 0) {
+    throw new Error("Please enter a positive shift factor");
+}
+
   let caesarCipherString = "";
   const arrayOfString = string.split("");
 

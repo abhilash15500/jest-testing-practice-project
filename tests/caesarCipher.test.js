@@ -28,3 +28,7 @@ test("Returns a string with shift factor of 26 (full alphabet cycle)", () => {
 test("Returns an empty string when input is empty", () => {
     expect(caesarCipher("", 5)).toBe("");
 });
+
+test("Return an error when user enters a negative shift number",()=>{
+    expect(() => caesarCipher("hii",-2)).toThrow("Please enter a positive shift factor");
+})
