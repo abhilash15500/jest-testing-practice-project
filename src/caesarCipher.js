@@ -3,16 +3,15 @@ const alphabets = "abcdefghijklmnopqrstuvwxyz";
 
 //utility function
 function isNotLetter(char) {
-    return /[^a-zA-Z]/.test(char);
+  return /[^a-zA-Z]/.test(char);
 }
 
 // caesar cipher func
 
 function caesarCipher(string, shiftFactor) {
-
-if(shiftFactor < 0) {
+  if (shiftFactor < 0) {
     throw new Error("Please enter a positive shift factor");
-}
+  }
 
   let caesarCipherString = "";
   const arrayOfString = string.split("");
@@ -25,10 +24,9 @@ if(shiftFactor < 0) {
       indexOfLetter = indexOfLetter - alphabets.length;
     }
 
-    if(isNotLetter(letter) === true) {
-        caesarCipherString =
-        caesarCipherString + letter;
-        return;
+    if (isNotLetter(letter) === true) {
+      caesarCipherString = caesarCipherString + letter;
+      return;
     }
 
     if (letter.toUpperCase() === letter) {

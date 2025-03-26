@@ -1,5 +1,4 @@
 function reverseString(string) {
-
   let arrayOfString = string.split("").reverse();
   let resultString = "";
   arrayOfString.forEach((letter) => {
